@@ -23,7 +23,7 @@ const app = http.createServer((req, res) => {
         console.log = originalConsoleLog;
       })
       .catch((err) => {
-        res.end("This is the list of our students\nCannot load the database");
+        res.end("Cannot load the database");
         console.log = originalConsoleLog;
       });
     }
