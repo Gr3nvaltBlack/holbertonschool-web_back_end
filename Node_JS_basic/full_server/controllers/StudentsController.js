@@ -1,8 +1,9 @@
 import read_data from '../utils.js';
-const data_path = process.argv[2];
+
 
 class StudentsController {
     static getAllStudents(request, response) {
+      const data_path = process.argv[2];
         read_data(data_path)
         .then((data) => {
          const fields = Object.keys(data).sort((a, b) => a.toLowerCase()
@@ -21,6 +22,7 @@ class StudentsController {
         });
     }
     static getAllStudentsByMajor(request, response) {
+      const data_path = process.argv[2];
         const { major } = request.params;
 
         if (major !== 'CS' && major !== 'SWE') {
