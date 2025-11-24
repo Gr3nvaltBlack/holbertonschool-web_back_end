@@ -42,11 +42,9 @@ class Server:
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         """
         Return a deletion-resilient hypermedia pagination dictionary.
-    
         Arguments:
         index -- the current start index of the page (default None)
         page_size -- the number of items per page (default 10)
-    
         The method returns a dictionary containing:
         - index: the current index
         - next_index: the index to be used for the next page
