@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
+"""
+Module 2 - Hypermedia Pagination
 
+This module provides a Server class for paginating a CSV database
+of popular first names using hypermedia pagination.
+It also includes the `index_range` function to calculate
+the starting and ending indices of a page.
+"""
 import csv
 import math
 from typing import List, Tuple, Dict
