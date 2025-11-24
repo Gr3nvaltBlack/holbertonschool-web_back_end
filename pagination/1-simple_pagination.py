@@ -2,7 +2,7 @@
 """
 Module 1 - Simple Pagination
 
-This module provides a Server class for paginating 
+This module provides a Server class for paginating
 a CSV database of popular first names,
 and an index_range function for calculating
 the starting and ending indices of a page.
