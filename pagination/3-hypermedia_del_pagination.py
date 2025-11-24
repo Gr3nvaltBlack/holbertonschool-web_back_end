@@ -40,6 +40,19 @@ class Server:
         return self.__indexed_dataset
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
+        """
+        Return a deletion-resilient hypermedia pagination dictionary.
+    
+        Arguments:
+        index -- the current start index of the page (default None)
+        page_size -- the number of items per page (default 10)
+    
+        The method returns a dictionary containing:
+        - index: the current index
+        - next_index: the index to be used for the next page
+        - page_size: the actual number of items returned
+        - data: the list of items in the current page
+        """
         index_dataset = self.indexed_dataset()
         data_list = []
         next_index = index + page_size
